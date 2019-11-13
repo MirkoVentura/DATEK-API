@@ -1,0 +1,109 @@
+<div class="row mt-2">
+    <!--<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <mdb-form-field style="width:100% !important">
+                <mdb-label>
+                    Seleziona una stazione:
+                </mdb-label>
+                <mdb-select placeholder="Stazione di " formControlName="stazioneId"
+                            [(ngModel)]="stazione"
+                            name="stazioneId"
+                            required [ngClass]="{ 'is-invalid': submitted && f.stazioneId.errors }"
+                            (ngModelChange)='onSelectedStation($event)'>
+                    <mdb-option [value]="example.id" *ngFor="let example of stations">
+                        {{ example.Nome }}
+                    </mdb-option>
+                </mdb-select>
+                <mat-error *ngIf="f.stazioneId.hasError('required')">
+                    La stazione  è <strong>obbligatoria</strong>
+                </mat-error>
+            </mdb-form-field>
+        </div>
+    </form>-->
+    <div  class="col-6 offset-3 text-center">
+        <form [formGroup]="postForm" class="text-center border border-light p-5" (ngSubmit)="onSubmit()">
+            <p class="h4 mb-4">Ricerca per Stazione</p>           
+            <label>Stazione</label>
+            <select class="browser-default custom-select mb-4"  formControlName="stazioneId">
+                <option [value]="example.Name" *ngFor="let example of stations">
+                    {{example.Name}}
+                </option>
+            </select>
+            <button class="btn btn-info btn-block">Calcola</button>
+        </form>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <!--Card-->
+        <mdb-card cascade="true" narrower="true" class="mt-5">
+            <!--Card image-->
+            <div class="view gradient-card-header blue darken-2">
+                <h4 class="h4-responsive text-white">Risultati Ottenuti </h4>
+            </div>
+            <!--/Card image-->
+            <!--Card content-->
+            <mdb-card-body>
+
+                <h3 class="mt-5 text-left"><strong>Valore Medio Registrato</strong></h3>
+                <p>
+                   Di seguito i valori registrati dalla stazione {{stazione}} per l' anno 2018
+                </p>
+
+
+                <table class="table">
+                    <thead class="blue-grey lighten-4">
+                        <tr>
+                            <th>Inquinante</th>
+                            <th>Valore medio 2018</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let example of results">
+                            <th scope="row">{{example.name}}</th>
+                            <td>{{example.avg}}</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <h3 class="mt-5 text-left"><strong>Referti Correlati</strong></h3>
+                <p>
+                    Di seguito i referti per i pazienti che risiedono nell' area della stazione {{stazione}}
+                </p>
+
+
+                <!--Table-->
+                <table class="table">
+
+                    <!--Table head-->
+                    <thead class="blue-grey lighten-4">
+                        <tr>
+                            <th>Numero Referti Registrati</th>
+                            <th>Diagnosi Positiva</th>
+                            <th>Diagnosi Negativa</th>
+                        </tr>
+                    </thead>
+                    <!--Table head-->
+                    <!--Table body-->
+                    <tbody>
+                        <tr *ngFor="let example of results_referti">
+                            <th scope="row">{{example.numReferti}}</th>
+                            <td>{{example.positiva}}</td>
+                            <td>{{example.negativa}}</td>                            
+                        </tr>                       
+                    </tbody>
+                    <!--Table body-->
+                </table>
+                <!--Table-->
+ 
+
+            </mdb-card-body>
+            <!--/.Card content-->
+        </mdb-card>
+        <!--/.Card-->
+    </div>
+</div>

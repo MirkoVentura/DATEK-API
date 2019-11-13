@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/stazionis",
+      "handler": "Stazioni.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/stazionis/count",
+      "handler": "Stazioni.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/stazionis/:id",
+      "handler": "Stazioni.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/stazionis",
+      "handler": "Stazioni.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/stazionis/:id",
+      "handler": "Stazioni.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/stazionis/:id",
+      "handler": "Stazioni.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

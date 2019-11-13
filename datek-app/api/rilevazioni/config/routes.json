@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rilevazioni",
+      "handler": "Rilevazioni.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rilevazioni/count",
+      "handler": "Rilevazioni.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rilevazioni/:id",
+      "handler": "Rilevazioni.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rilevazioni",
+      "handler": "Rilevazioni.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rilevazioni/:id",
+      "handler": "Rilevazioni.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rilevazioni/:id",
+      "handler": "Rilevazioni.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

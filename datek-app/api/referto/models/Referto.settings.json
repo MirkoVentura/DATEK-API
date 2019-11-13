@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "referti",
+  "info": {
+    "name": "referto",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "PatientId": {
+      "type": "string"
+    },
+    "PatientSex": {
+      "enum": [
+        "male",
+        "female"
+      ],
+      "type": "enumeration"
+    },
+    "PatientAge": {
+      "type": "integer"
+    },
+    "Diagnosis": {
+      "enum": [
+        "positive",
+        "negative"
+      ],
+      "type": "enumeration"
+    },
+    "PatientWeight": {
+      "type": "float"
+    },
+    "PatetientAddress": {
+      "model": "stazioni"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/refertos",
+      "handler": "Referto.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/refertos/count",
+      "handler": "Referto.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/refertos/:id",
+      "handler": "Referto.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/refertos",
+      "handler": "Referto.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/refertos/:id",
+      "handler": "Referto.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/refertos/:id",
+      "handler": "Referto.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

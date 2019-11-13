@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "Rilevazioni",
+  "info": {
+    "name": "rilevazioni",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "descrizione": {
+      "type": "string"
+    },
+    "d_ril": {
+      "type": "date"
+    },
+    "benzene": {
+      "type": "float"
+    },
+    "co": {
+      "type": "float"
+    },
+    "no2": {
+      "type": "float"
+    },
+    "o3": {
+      "type": "float"
+    },
+    "pm10": {
+      "type": "float"
+    },
+    "pm2_5": {
+      "type": "float"
+    },
+    "stazione": {
+      "type": "string"
+    },
+    "coord_dec": {
+      "type": "string"
+    },
+    "so2": {
+      "type": "float"
+    }
+  }
+}

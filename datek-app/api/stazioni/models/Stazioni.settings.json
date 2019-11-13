@@ -1,0 +1,16 @@
+{
+  "connection": "default",
+  "collectionName": "Stazioni",
+  "info": {
+    "name": "stazioni",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    }
+  }
+}
