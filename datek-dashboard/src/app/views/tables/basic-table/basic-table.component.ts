@@ -13,7 +13,7 @@ export class BasicTableComponent implements OnInit {
     postForm: FormGroup;
     results:  Array<any>;
     results_referti: Array<any>;
-
+    
     stazione: any;
 
     constructor(
@@ -44,33 +44,33 @@ export class BasicTableComponent implements OnInit {
             //benzene
             let result_benzene = el.map((a: any) => a.benzene);
             let result_benzene_clean = result_benzene.filter((e: any) => e != "");
-            this.results.push({ name: "benzene", avg: this.getAvg(result_benzene_clean) });
+            this.results.push({ name: "Benzene", avg: this.getAvg(result_benzene_clean),pedice:"" });
 
             //co
             let result_co = el.map((a: any) => a.co);
             let result_co_clean = result_co.filter((e: any) => e != "");
-            this.results.push({ name: "co", avg: this.getAvg(result_co_clean) });
+            this.results.push({ name: "CO", avg: this.getAvg(result_co_clean), pedice: "" });
 
             //pm10
             let result_pm10 = el.map((a: any) => a.pm10);
             let result_pm10_clean = result_pm10.filter((e: any) => e != "");
-            this.results.push({ name: "pm10", avg: this.getAvg(result_pm10_clean) });
+            this.results.push({ name: "PM10", avg: this.getAvg(result_pm10_clean), pedice: "" });
             //pm2_5
             let result_pm2_5 = el.map((a: any) => a.pm2_5);
             let result_pm2_5_clean = result_pm2_5.filter((e: any) => e != "");
-            this.results.push({ name: "pm2_5", avg: this.getAvg(result_pm2_5_clean) });
+            this.results.push({ name: "PM2.5", avg: this.getAvg(result_pm2_5_clean), pedice: "" });
             // NO2
             let result_no2 = el.map((a: any) => a.no2);
             let result_no2_clean = result_no2.filter((e: any) => e != "");
-            this.results.push({ name: "no2", avg: this.getAvg(result_no2_clean) });
+            this.results.push({ name: "NO", avg: this.getAvg(result_no2_clean), pedice: "2" });
             // so2
             let result_so2 = el.map((a: any) => a.so2);
             let result_s02_clean = result_so2.filter((e: any) => e != "");
-            this.results.push({ name: "so2", avg: this.getAvg(result_s02_clean) });                       
+            this.results.push({ name: "SO", avg: this.getAvg(result_s02_clean), pedice: "2" });                       
             //o3
             let result_o3 = el.map((a: any) => a.o3);
             let result_o3_clean = result_o3.filter((e: any) => e != "");
-            this.results.push({ name: "o3", avg: this.getAvg(result_o3_clean) });
+            this.results.push({ name: "O", avg: this.getAvg(result_o3_clean), pedice: "3" });
 
 
             console.log('risultati per la stazione', this.results);
@@ -85,6 +85,21 @@ export class BasicTableComponent implements OnInit {
             let negativa = el.filter((e: any) => e.Diagnosis === "negative").length;
             this.results_referti.push({ numReferti: numReferti, positiva: positiva, negativa: negativa });
         })
+    }
+
+
+    createTXT() {
+        var textFile = null
+        var data = new Blob(["AAAAAA"], { type: 'text/plain' });
+
+        // If we are replacing a previously generated file we need to
+        // manually revoke the object URL to avoid memory leaks.
+        if (textFile !== null) {
+            window.URL.revokeObjectURL(textFile);
+        }
+
+        textFile = window.URL.createObjectURL(data);
+        console.log('textFile',textFile);
     }
 
     getAvg(arr: any) {

@@ -48,7 +48,7 @@
 
                 <h3 class="mt-5 text-left"><strong>Valore Medio Registrato</strong></h3>
                 <p>
-                   Di seguito i valori registrati dalla stazione {{stazione}} per l' anno 2018
+                    Di seguito i valori registrati dalla stazione {{stazione}} per l' anno 2018
                 </p>
 
 
@@ -62,7 +62,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let example of results">
-                            <th scope="row">{{example.name}}</th>
+                            <th scope="row">{{example.name}}<sub>{{example.pedice}}</sub> </th>
                             <td>{{example.avg}}</td>
 
                         </tr>
@@ -93,13 +93,12 @@
                         <tr *ngFor="let example of results_referti">
                             <th scope="row">{{example.numReferti}}</th>
                             <td>{{example.positiva}}</td>
-                            <td>{{example.negativa}}</td>                            
-                        </tr>                       
+                            <td>{{example.negativa}}</td>
+                        </tr>
                     </tbody>
                     <!--Table body-->
                 </table>
                 <!--Table-->
- 
 
             </mdb-card-body>
             <!--/.Card content-->
