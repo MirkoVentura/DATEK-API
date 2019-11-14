@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"datek-app.strapi_administrator"},{"v":{"$numberInt":"2"},"unique":true,"key":{"username":{"$numberInt":"1"}},"name":"username_1","ns":"datek-app.strapi_administrator","background":true}],"uuid":"f8c26dc473f24943a002c1c80870daf7"}

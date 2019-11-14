@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"datek-app.users-permissions_role"},{"v":{"$numberInt":"2"},"unique":true,"key":{"type":{"$numberInt":"1"}},"name":"type_1","ns":"datek-app.users-permissions_role","background":true}],"uuid":"11b4f8d5da24450a8b3047d9e4ca1fbc"}

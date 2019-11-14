@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"datek-app.Stazioni"}],"uuid":"5d3c670e9dfd48da987787cbed23f7f4"}
