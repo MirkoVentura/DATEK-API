@@ -5,10 +5,12 @@ Prerequisiti.
 - Angular cli   (https://cli.angular.io/)
 Istruzioni di funzionamento 
 Importare il contenuto della cartella db/dump su mongodb.
-entrare in datatek-app e lanciare:
+entrare in datek-app e lanciare:
    1) npm i
    2) npm run
 
-entrare in datatek-dashbord e lanciare
+entrare in datek-dashboard e lanciare
    1) npm i
    2) ng serve -o
+
+

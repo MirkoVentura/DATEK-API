@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup} from '@angular/forms';
 import { DatekService } from '../../../serivices/datek.service';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dashboard2',
@@ -100,7 +99,7 @@ export class Dashboard2Component implements OnInit {
     valueByStations = new Map();
 
     constructor(
-        private datekService: DatekService, private sanitizer: DomSanitizer) {
+        private datekService: DatekService) {
 
     }
 
@@ -214,38 +213,38 @@ export class Dashboard2Component implements OnInit {
                             this.chartDatasets.push({ data: this.benzeneData, label: "Benzene" });
                             let sortedBenzene = this.benzeneDataX.sort();
                             this.chartDatasetsSingles.push({
-                                dataSet: [{ data: this.benzeneData, label: "Benzene" }], label: "Benzene", pedice: "", labels: sortedBenzene
+                                dataSet: [{ data: this.benzeneData, label: "Benzene" }], label: "Benzene", pedice: "", labels: sortedBenzene,misura:"Mg/m",misuraPedice:"3"
                             });
                             let sortedCo = this.coDataX.sort();
                             this.chartDatasets.push({ data: this.coData, label: "CO" });
                             this.chartDatasetsSingles.push({
-                                dataSet: [{ data: this.coData, label: "CO" }], label: "CO", pedice: "", labels: sortedCo
+                                dataSet: [{ data: this.coData, label: "CO" }], label: "CO", pedice: "", labels: sortedCo,  misura: "mg/m", misuraPedice: "3"
                             });
                             let sortedPm10 = this.pm10DataX.sort();
                             this.chartDatasets.push({ data: this.pm10Data, label: "PM10" });
                             this.chartDatasetsSingles.push({
-                                dataSet: [{ data: this.pm10Data, label: "PM10" }], label: "PM10", pedice: "", labels: sortedPm10
+                                dataSet: [{ data: this.pm10Data, label: "PM10" }], label: "PM10", pedice: "", labels: sortedPm10, misura: "Mg/m", misuraPedice: "3"
                             });
                             let sortedPm25 = this.pm2_5DataX.sort();
 
                             this.chartDatasets.push({ data: this.pm2_5Data, label: "PM2.5" });
                             this.chartDatasetsSingles.push({
-                                dataSet: [{ data: this.pm2_5Data, label: "PM2.5" }], label: "PM2.5", pedice: "", labels: sortedPm25
+                                dataSet: [{ data: this.pm2_5Data, label: "PM2.5" }], label: "PM2.5", pedice: "", labels: sortedPm25, misura: "Mg/m", misuraPedice: "3"
                             });
                             let sortedNo2 = this.no2DataX.sort();
                             this.chartDatasets.push({ data: this.no2Data, label: "NO2" });
                             this.chartDatasetsSingles.push({
-                                dataSet: [{ data: this.no2Data, label: "NO2" }], label: "NO", pedice: "2", labels: sortedNo2
+                                dataSet: [{ data: this.no2Data, label: "NO2" }], label: "NO", pedice: "2", labels: sortedNo2, misura: "Mg/m", misuraPedice: "3"
                             });
                             let sortedO3 = this.so3DataX.sort();
                             this.chartDatasets.push({ data: this.so3Data, label: "SO2" });
                             this.chartDatasetsSingles.push({
-                                dataSet: [{ data: this.so3Data, label: "SO" }], label: "SO", pedice: "2", labels: sortedO3
+                                dataSet: [{ data: this.so3Data, label: "SO" }], label: "SO", pedice: "2", labels: sortedO3, misura: "Mg/m", misuraPedice: "3"
                             });
                             this.chartDatasets.push({ data: this.o3Data, label: "O3" });
                             let sortedO = this.o3DataX.sort();
                             this.chartDatasetsSingles.push({
-                                dataSet: [{ data: this.so3Data, label: "O3" }], label: "O", pedice: "3", labels: sortedO
+                                dataSet: [{ data: this.so3Data, label: "O3" }], label: "O", pedice: "3", labels: sortedO, misura: "Mg/m", misuraPedice: "3"
                             });
                             this.flagInquinanti = true;
                             console.log('all data ', this.chartDatasetsSingles);

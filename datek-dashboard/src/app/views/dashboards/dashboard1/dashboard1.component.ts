@@ -118,31 +118,31 @@ export class Dashboard1Component implements OnInit {
             }
             this.chartDatasets.push({ data: this.benzeneData, label: "Benzene" });
             this.chartDatasetsSingles.push({
-                dataSet: [{ data: this.benzeneData, label: "Benzene" }], label: "Benzene", pedice: ""
+                dataSet: [{ data: this.benzeneData, label: "Benzene" }], label: "Benzene", pedice: "", misura: "Mg/m", misuraPedice: "3"            
             });
             this.chartDatasets.push({ data: this.coData, label: "CO" });
             this.chartDatasetsSingles.push({
-                dataSet: [{ data: this.coData, label: "CO" }], label: "CO", pedice: ""
+                dataSet: [{ data: this.coData, label: "CO" }], label: "CO", pedice: "", misura: "Mg/m", misuraPedice: "3"
             });
             this.chartDatasets.push({ data: this.pm10Data, label: "PM10" });
             this.chartDatasetsSingles.push({
-                dataSet: [{ data: this.pm10Data, label: "PM10" }], label: "PM10", pedice: ""
+                dataSet: [{ data: this.pm10Data, label: "PM10" }], label: "PM10", pedice: "", misura: "Mg/m", misuraPedice: "3"
             });
             this.chartDatasets.push({ data: this.pm2_5Data, label: "PM2.5" });
             this.chartDatasetsSingles.push({
-                dataSet: [{ data: this.pm2_5Data, label: "PM2.5" }], label: "PM2.5", pedice: ""
+                dataSet: [{ data: this.pm2_5Data, label: "PM2.5" }], label: "PM2.5", pedice: "", misura: "Mg/m", misuraPedice: "3"
             });
             this.chartDatasets.push({ data: this.no2Data, label: "NO2" });
             this.chartDatasetsSingles.push({
-                dataSet: [{ data: this.no2Data, label: "NO2" }], label: "NO", pedice: "2"
+                dataSet: [{ data: this.no2Data, label: "NO2" }], label: "NO", pedice: "2", misura: "Mg/m", misuraPedice: "3"
             });
             this.chartDatasets.push({ data: this.so3Data, label: "SO2" });
             this.chartDatasetsSingles.push({
-                dataSet: [{ data: this.so3Data, label: "SO" }], label: "SO", pedice: "2"
+                dataSet: [{ data: this.so3Data, label: "SO" }], label: "SO", pedice: "2", misura: "Mg/m", misuraPedice: "3"
             });
             this.chartDatasets.push({ data: this.o3Data, label: "O3" });
             this.chartDatasetsSingles.push({
-                dataSet: [{ data: this.so3Data, label: "O3" }], label: "O", pedice: "3"
+                dataSet: [{ data: this.so3Data, label: "O3" }], label: "O", pedice: "3", misura: "Mg/m", misuraPedice: "3"
             });
             this.flagInquinanti = true;
             console.log('risultati per la stazione', this.chartDatasets);
