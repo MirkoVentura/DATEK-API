@@ -161,8 +161,9 @@ export class Dashboard2Component implements OnInit {
                         let numReferti = referti.length;
                         let positiva = referti.filter((e: any) => e.Diagnosis === "positive").length;
                         let YRef = (positiva / numReferti) * 100;
+                        let stringStation = stazione + " ";
+
                         for (var k = 0; k < resultsByStations.length; k++) {
-                            let stringStation = stazione+" ";
                             let singleRes = resultsByStations[k];
                             if (singleRes.name == "Benzene") {
                                 this.benzeneData.push({ x: singleRes.avg, y: YRef });
@@ -206,8 +207,9 @@ export class Dashboard2Component implements OnInit {
                                 stringStation += singleRes.avg + " " 
 
                             }
-                            this.valueByStations.set(stazione, stringStation);
                         }
+                        this.valueByStations.set(stazione, stringStation);
+
                         st++;
                         if (st === this.stations.length) {
                             this.chartDatasets.push({ data: this.benzeneData, label: "Benzene" });
